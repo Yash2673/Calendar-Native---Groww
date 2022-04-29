@@ -1,12 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import Calendar from './Calendar'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView>
+      <View style={{
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}>
+        <Text style={{
+          marginTop: 150,
+          fontWeight: "bold",
+          fontSize: 25,
+          marginBottom: 20,
+        }}>Yash's Calendar (Groww)</Text>
+
+        <Calendar />
+
+      </View>
+    </ScrollView>
   );
 }
 
